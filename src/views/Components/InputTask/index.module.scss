@@ -1,0 +1,45 @@
+:root{
+    --task-bg: #a89adb;
+}
+.inputTask {
+    display: grid;
+    grid-template-columns: 1fr 50px 50px;
+    margin-bottom: 15px;
+    background: var(--task-bg);
+    border-radius: 5px;
+    padding-right: 7px;
+}
+.inputTaskLabel {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 12px 15px;
+    cursor: pointer;
+}
+.inputTaskCheckbox {
+    width: 20px;
+    height: 20px;
+}
+.inputTaskTitle{
+    padding: 5px;
+    line-height: 1.2;
+}
+.inputTaskEdit, .inputTaskRemove {
+    display: block;
+    height: 100%;
+    border: none;
+    background: none no-repeat center center;
+    cursor: pointer;
+    padding: 0;
+    transition: opacity 0.2s;
+}
+.inputTaskEdit:hover, .inputTaskRemove:hover {
+    opacity: 0.5;
+}
+
+.inputTaskEdit {
+    background-image: url('./images/edit.svg');
+}
+.inputTaskRemove {
+    background-image: url('./images/trash.svg');
+}
