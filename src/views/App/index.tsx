@@ -1,6 +1,7 @@
 import React, { useEffect }from "react";
 import styles from './index.module.scss';
 import { useToDoStore } from "../../data/stores/useToDoStore";
+import { InputPlus } from "../Components/InputPlus";
 
 export const App: React.FC = () => {
     
@@ -10,18 +11,20 @@ export const App: React.FC = () => {
         state.updateTask,
         state.removeTask,
     ]);
-    useEffect(() => {
-        createTask('Some Title');
-    }, []);
 
-    console.log('11', tasks);
+    // console.log(tasks);
     
-
     return ( 
         <article className={styles.article}>
             <h1 className={styles.articleTitle}>Todo App</h1>
             <section className={styles.articleSection}>
-
+                <InputPlus 
+                    onAdd={(title) => {
+                        if(title) {
+                            createTask(title);
+                        }
+                    }}
+                />
             </section>
             <section className={styles.articleSection}>
 

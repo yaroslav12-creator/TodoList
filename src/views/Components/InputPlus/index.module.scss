@@ -1,0 +1,39 @@
+:root {
+    --input-bg: #f7f3fa;
+    --input-border-color: #b1b1b1;
+    --input-placeholder-color: #707070;
+    --button-bg: #725bc5;
+}
+
+.inputPlus {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}   
+.inputPlusValue {
+    width: 100%;
+    border: 1px solid var(--input-border-color);
+    border-right: none;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px; 
+    padding: 9px 10px;
+    font: 1rem/1.4 'Roboto', 'sans-serif';
+    outline: none;
+    background-color: var(--input-bg);
+}   
+.inputPlusValue::placeholder {
+    color: var(--input-placeholder-color);
+}
+.inputPlusButton {
+    width: 50px;
+    border-radius: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: var(--button-bg) url('./images/plus.svg') no-repeat center center;
+    transition: opacity 0.2s;
+}
+.inputPlusButton:hover {
+    opacity: 0.9;
+}
