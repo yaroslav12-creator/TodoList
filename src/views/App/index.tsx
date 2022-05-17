@@ -2,6 +2,7 @@ import React, { useEffect }from "react";
 import styles from './index.module.scss';
 import { useToDoStore } from "../../data/stores/useToDoStore";
 import { InputPlus } from "../Components/InputPlus";
+import { InputTask } from "../Components/InputTask";
 
 export const App: React.FC = () => {
     
@@ -26,8 +27,21 @@ export const App: React.FC = () => {
                     }}
                 />
             </section>
+            <hr style={{marginBottom: '10px'}}/>
             <section className={styles.articleSection}>
-
+                {!tasks.length
+                ? <p className={styles.articleText}>There is no tasks yes</p>
+                : tasks.map((task) => (
+                    <InputTask 
+                        key={task.id}
+                        id={task.id}
+                        title={task.title}
+                        onDone={removeTask}
+                        onEdited={updateTask}
+                        onRemoved={removeTask}
+                    />
+                ))
+                }
             </section>
         </article>
     );
