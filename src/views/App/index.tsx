@@ -13,7 +13,7 @@ export const App: React.FC = () => {
         state.removeTask,
     ]);
 
-    // console.log(tasks);
+    const _ = () => {};
     
     return ( 
         <article className={styles.article}>
@@ -36,7 +36,7 @@ export const App: React.FC = () => {
                         key={task.id}
                         id={task.id}
                         title={task.title}
-                        onDone={removeTask}
+                        onDone={_}
                         onEdited={updateTask}
                         onRemoved={removeTask}
                     />

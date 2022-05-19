@@ -24,7 +24,17 @@
     padding: 5px;
     line-height: 1.2;
 }
-.inputTaskEdit, .inputTaskRemove {
+.inputTaskTitleEdit {
+    font: 1rem/1em 'Roboto', 'sans-serif';
+    border: none;
+    padding: 5px;
+    background: none;
+    box-shadow: 0 4px 0 -3px #514286;
+}
+.inputTaskTitleEdit:focus {
+    outline: none;
+}
+.inputTaskEdit, .inputTaskRemove, .inputTaskSave {
     display: block;
     height: 100%;
     border: none;
@@ -42,4 +52,7 @@
 }
 .inputTaskRemove {
     background-image: url('./images/trash.svg');
+}
+.inputTaskSave {
+    background-image: url('./images/check.svg');
 }
